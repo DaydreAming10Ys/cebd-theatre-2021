@@ -41,9 +41,27 @@ class AppTablesDataV1(QDialog):
         # TODO 1.3 : modifier pour afficher les nouveaux éléments (il faut aussi changer le fichier .ui correspondant)
         # TODO 1.4 : modifier pour afficher les nouveaux éléments (il faut aussi changer le fichier .ui correspondant)
         # TODO 1.5 : modifier pour afficher les nouveaux éléments (il faut aussi changer le fichier .ui correspondant)
+        self.refreshTable(self.ui.labelSpectacles, self.ui.tableSpectacles,
+                          "SELECT noSpec, nomSpec, prixBaseSpec "
+                          "FROM V1_LesSpectacles")
         self.refreshTable(self.ui.label_representations, self.ui.tableRepresentations,
-                          "SELECT noSpec, nomSpec, dateRep, promoRep, prixBaseSpec, prixRep "
-                          "FROM LesRepresentations")
+                          "SELECT dateRep, promoRep, prixRep "
+                          "FROM V1_LesRepresentations")
         self.refreshTable(self.ui.label_places, self.ui.tablePlaces,
-                          "SELECT noPlace, noRang, noZone, catZone, tauxZone "
-                          "FROM LesPlaces")
+                          "SELECT noPlace, noRang, noZone "
+                          "FROM V1_LesPlaces")
+        self.refreshTable(self.ui.labelZones, self.ui.tableZones,
+                          "SELECT noZone, catZone "
+                          "FROM V1_LesZones")
+        self.refreshTable(self.ui.labelCategorie, self.ui.tableCategorie,
+                          "SELECT catZone, tauxZone "
+                          "FROM V1_Categorie")
+        self.refreshTable(self.ui.labelPersonnes, self.ui.tablePersonnes,
+                          "SELECT typePer, tauxPer "
+                          "FROM V1_LesPersonnes")
+        self.refreshTable(self.ui.labelVentes, self.ui.tableVentes,
+                          "SELECT noVente, prixVente "
+                          "FROM V1_LesVentes")
+        self.refreshTable(self.ui.labelDossiers, self.ui.tableDossiers,
+                          "SELECT noDos, prixDos "
+                          "FROM V1_LesDossiers")

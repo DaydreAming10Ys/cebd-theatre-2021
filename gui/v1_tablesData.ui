@@ -29,8 +29,62 @@
    <item>
     <widget class="QTabWidget" name="tabWidget">
      <property name="currentIndex">
-      <number>1</number>
+      <number>0</number>
      </property>
+     <widget class="QWidget" name="tabSpectacles">
+      <attribute name="title">
+       <string>LesSpectacles</string>
+      </attribute>
+      <widget class="QTableWidget" name="tableSpectacles">
+       <property name="geometry">
+        <rect>
+         <x>15</x>
+         <y>11</y>
+         <width>1031</width>
+         <height>471</height>
+        </rect>
+       </property>
+       <attribute name="horizontalHeaderMinimumSectionSize">
+        <number>50</number>
+       </attribute>
+       <attribute name="horizontalHeaderStretchLastSection">
+        <bool>true</bool>
+       </attribute>
+       <column>
+        <property name="text">
+         <string>noSpec</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>nomSpec</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>prixBaseSpec</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>dateRep</string>
+        </property>
+       </column>
+      </widget>
+      <widget class="QLabel" name="labelSpectacles">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>490</y>
+         <width>1031</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </widget>
      <widget class="QWidget" name="tabRepresentations">
       <attribute name="title">
        <string>LesRepresentations</string>
@@ -60,19 +114,19 @@
           <enum>Qt::LeftToRight</enum>
          </property>
          <property name="columnCount">
-          <number>6</number>
+          <number>3</number>
          </property>
          <attribute name="horizontalHeaderCascadingSectionResizes">
           <bool>true</bool>
+         </attribute>
+         <attribute name="horizontalHeaderMinimumSectionSize">
+          <number>50</number>
          </attribute>
          <attribute name="horizontalHeaderDefaultSectionSize">
           <number>150</number>
          </attribute>
          <attribute name="horizontalHeaderHighlightSections">
           <bool>true</bool>
-         </attribute>
-         <attribute name="horizontalHeaderMinimumSectionSize">
-          <number>50</number>
          </attribute>
          <attribute name="horizontalHeaderStretchLastSection">
           <bool>true</bool>
@@ -82,27 +136,12 @@
          </attribute>
          <column>
           <property name="text">
-           <string>noSpec</string>
-          </property>
-         </column>
-         <column>
-          <property name="text">
-           <string>nomSpec</string>
-          </property>
-         </column>
-         <column>
-          <property name="text">
            <string>dateRep</string>
           </property>
          </column>
          <column>
           <property name="text">
            <string>promoRep</string>
-          </property>
-         </column>
-         <column>
-          <property name="text">
-           <string>prixBaseSpec</string>
           </property>
          </column>
          <column>
@@ -168,11 +207,11 @@
       <layout class="QVBoxLayout" name="verticalLayout_5">
        <item>
         <widget class="QTableWidget" name="tablePlaces">
-         <attribute name="horizontalHeaderDefaultSectionSize">
-          <number>200</number>
-         </attribute>
          <attribute name="horizontalHeaderMinimumSectionSize">
           <number>50</number>
+         </attribute>
+         <attribute name="horizontalHeaderDefaultSectionSize">
+          <number>200</number>
          </attribute>
          <attribute name="horizontalHeaderStretchLastSection">
           <bool>true</bool>
@@ -193,16 +232,6 @@
          <column>
           <property name="text">
            <string>noZone</string>
-          </property>
-         </column>
-         <column>
-          <property name="text">
-           <string>typeZone</string>
-          </property>
-         </column>
-         <column>
-          <property name="text">
-           <string>tauxZone</string>
           </property>
          </column>
         </widget>
@@ -255,6 +284,217 @@
         </widget>
        </item>
       </layout>
+     </widget>
+     <widget class="QWidget" name="tabZones">
+      <attribute name="title">
+       <string>LesZones</string>
+      </attribute>
+      <widget class="QTableWidget" name="tableZones">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>1051</width>
+         <height>491</height>
+        </rect>
+       </property>
+       <attribute name="horizontalHeaderCascadingSectionResizes">
+        <bool>false</bool>
+       </attribute>
+       <attribute name="horizontalHeaderMinimumSectionSize">
+        <number>38</number>
+       </attribute>
+       <attribute name="horizontalHeaderHighlightSections">
+        <bool>true</bool>
+       </attribute>
+       <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+        <bool>false</bool>
+       </attribute>
+       <attribute name="horizontalHeaderStretchLastSection">
+        <bool>false</bool>
+       </attribute>
+       <attribute name="verticalHeaderVisible">
+        <bool>false</bool>
+       </attribute>
+       <attribute name="verticalHeaderCascadingSectionResizes">
+        <bool>false</bool>
+       </attribute>
+       <column>
+        <property name="text">
+         <string>noZone</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>catZone</string>
+        </property>
+       </column>
+      </widget>
+      <widget class="QLabel" name="labelZones">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>499</y>
+         <width>1031</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="tabCategorie">
+      <attribute name="title">
+       <string>Categorie</string>
+      </attribute>
+      <widget class="QTableWidget" name="tableCategorie">
+       <property name="geometry">
+        <rect>
+         <x>25</x>
+         <y>11</y>
+         <width>1001</width>
+         <height>491</height>
+        </rect>
+       </property>
+       <column>
+        <property name="text">
+         <string>catZone</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>tauxZone</string>
+        </property>
+       </column>
+      </widget>
+      <widget class="QLabel" name="labelCategorie">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>500</y>
+         <width>1001</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>TextLabel</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="tabPersonnes">
+      <attribute name="title">
+       <string>LesPersonnes</string>
+      </attribute>
+      <widget class="QTableWidget" name="tablePersonnes">
+       <property name="geometry">
+        <rect>
+         <x>15</x>
+         <y>11</y>
+         <width>1031</width>
+         <height>471</height>
+        </rect>
+       </property>
+       <column>
+        <property name="text">
+         <string>typePer</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>tauxPer</string>
+        </property>
+       </column>
+      </widget>
+      <widget class="QLabel" name="labelPersonnes">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>490</y>
+         <width>1001</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>TextLabel</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="tabVentes">
+      <attribute name="title">
+       <string>LesVentes</string>
+      </attribute>
+      <widget class="QTableWidget" name="tableVentes">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>10</y>
+         <width>991</width>
+         <height>461</height>
+        </rect>
+       </property>
+       <column>
+        <property name="text">
+         <string>noVente</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>prixVente</string>
+        </property>
+       </column>
+      </widget>
+      <widget class="QLabel" name="labelVentes">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>486</y>
+         <width>1011</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>TextLabel</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="tabDossiers">
+      <attribute name="title">
+       <string>LesDossiers</string>
+      </attribute>
+      <widget class="QTableWidget" name="tableDossiers">
+       <property name="geometry">
+        <rect>
+         <x>25</x>
+         <y>11</y>
+         <width>1011</width>
+         <height>461</height>
+        </rect>
+       </property>
+       <column>
+        <property name="text">
+         <string>noDos</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>prixTotal</string>
+        </property>
+       </column>
+      </widget>
+      <widget class="QLabel" name="labelDossiers">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>486</y>
+         <width>991</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>TextLabel</string>
+       </property>
+      </widget>
      </widget>
     </widget>
    </item>
